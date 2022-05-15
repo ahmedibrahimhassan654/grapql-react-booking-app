@@ -25,8 +25,12 @@ const eventSchema = new mongoose.Schema(
       type: Date,
       required: [true, "please add  event date"],
     },
+    creator: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
   },
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Eevent", eventSchema);
+module.exports = mongoose.model("Event", eventSchema);
