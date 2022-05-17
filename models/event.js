@@ -8,7 +8,6 @@ const eventSchema = new mongoose.Schema(
       required: [true, "please add an event title"],
       minlength: [3, "too short"],
       maxlength: [100, "Too Long"],
-      unique: true,
     },
     description: {
       type: String,
